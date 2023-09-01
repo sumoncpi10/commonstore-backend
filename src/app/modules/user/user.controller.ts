@@ -35,6 +35,7 @@ const getAllFromDB = catchAsync(async (req, res) => {
 const getDataById = catchAsync(async (req, res) => {
   const mobileNo = req.params.mobileNo;
   const result = await UserService.getDataById(mobileNo);
+  console.log(mobileNo)
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,

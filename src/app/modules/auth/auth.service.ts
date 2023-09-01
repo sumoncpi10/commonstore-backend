@@ -82,6 +82,9 @@ const loginUser = async (payload: ILoginUser): Promise<IUserLoginResponse> => {
   // );
 
   return {
+    mobileNo,
+    role,
+    pbsCode,
     accessToken,
     refreshToken,
   };

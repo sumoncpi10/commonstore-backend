@@ -4,6 +4,12 @@ export type ILoginUser = {
 };
 
 export type IUserLoginResponse = {
+  mobileNo: string;
+  role: string;
+  pbsCode: string;
+  zonalCode?: string;
+  complainCode?: string;
+  substationCode?: string;
   accessToken: string;
   refreshToken?: string;
 };

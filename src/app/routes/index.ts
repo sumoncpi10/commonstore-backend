@@ -20,7 +20,6 @@ import { ZonalRoutes } from '../modules/zonal/zonal.route';
 const router = express.Router();
 
 const moduleRoutes = [
-  // ... routes
   {
     path: '/pbs',
     route: PbsRoutes,

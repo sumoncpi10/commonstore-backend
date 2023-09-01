@@ -10,7 +10,7 @@ import { AuthService } from './auth.service';
 
 const loginUser = catchAsync(async (req: Request, res: Response) => {
   const { ...loginData } = req.body;
-
+  console.log(loginData)
   const result = await AuthService.loginUser(loginData);
   const { refreshToken, ...others } = result;
 
@@ -20,10 +20,6 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     httpOnly: true,
   };
 
-  // delete refresh token
-  // if ('refreshToken' in result) {
-  //   delete result.refreshToken;
-  // }
   res.cookie('refreshToken', refreshToken, cookieOptions);
 
   sendResponse<IUserLoginResponse>(res, {
