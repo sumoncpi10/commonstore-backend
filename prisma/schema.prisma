@@ -226,8 +226,8 @@ model CapitalItem{
   issueBy User? @relation(fields: [issueByMobileNo], references: [mobileNo],name: "issueByCapital")
   assignToMobileNo String?
   assignTo User? @relation(fields: [assignToMobileNo], references: [mobileNo],name: "assignToCapital")
-  approveByMobleNo String?
-  approveBy User? @relation(fields: [approveByMobleNo], references: [mobileNo], name: "approveByCapital")
+  approveByMobileNo String?
+  approveBy User? @relation(fields: [approveByMobileNo], references: [mobileNo], name: "approveByCapital")
   receivedByMobileNo String?
   received User? @relation(fields: [receivedByMobileNo], references: [mobileNo], name: "reveivedByCapital")
   addByMobileNo String
